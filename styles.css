@@ -1,0 +1,127 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #2d6a4f; /* Verde escuro */
+    color: white;
+    padding: 1rem 0;
+}
+
+.nav-item a {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: #ffd700;
+}
+
+/* Títulos */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px 0;
+    position: relative;
+    z-index: 1;
+    color: #2d6a4f;
+    border-bottom: 5px solid #ffd700;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #ffd700;
+}
+
+/* Estilo de Parallax */
+.parallax {
+    background-image: url('campo-cidade.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Centralizando a Imagem */
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+/* Adicionando o efeito de flutuação nas imagens */
+.floating-img {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Texto do conteúdo */
+.section-content {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding: 20px;
+    color: #555;
+}
+
+/* Botão Flutuante */
+.btn-flutuante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2d6a4f;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-flutuante:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de Animação para Scroll */
+.scrollReveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scrollReveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
